@@ -1,5 +1,51 @@
+/*===== General styles import =====*/
+@import "./colors";
+@import "./fonts";
+
+/*===== Views styles import =====*/
+@import "./home";
+
+/*===== Variables =====*/
+$nav-height: 63px;
+$footer-height: 57.6px;
+
+
 *,*::after,*::before,p{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.3s;
+}
+body {
+    line-height: 1.6;
+}
+.view {
+    height: calc(100% - #{$footer-height} - #{$nav-height});
+    width: 100%;
+}
+
+/*===== Error view =====*/
+.error404 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: $danger
+}
+
+/*===== Navbar =====*/
+nav {
+    background: #33a9dc1c;
+    height: $nav-height;
+}
+
+/*===== Navbar =====*/
+.footer {
+    color: $light;
+    background: $dark;
+    height: $footer-height;
+}
+.navbar-brand {
+    margin: 0
 }

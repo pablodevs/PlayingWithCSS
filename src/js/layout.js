@@ -16,7 +16,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div style={{ height: "100%" }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -28,7 +28,10 @@ const Layout = () => {
 							<Example />
 						</Route>
 						<Route>
-							<h1>ERROR 404: URL not found!</h1>
+							<h2 className="view error404">
+								<i className="fas fa-exclamation-triangle mb-2" />
+								ERROR 404 page not found
+							</h2>
 						</Route>
 					</Switch>
 					<Footer />
