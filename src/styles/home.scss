@@ -6,5 +6,20 @@
 .home-wrapper {
     color: $info;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: 1px solid red
+}
+.home-title {
+    margin-block: 1rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-block: 1rem;
+}
+.home-cols {
+    height: 400px;
+    width: 400px;
+    margin: 0.4rem;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
