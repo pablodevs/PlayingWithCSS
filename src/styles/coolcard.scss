@@ -1,0 +1,39 @@
+/*===== General styles import =====*/
+@import "./colors";
+@import "./fonts";
+
+/*===== Cool Animated Card =====*/
+.coolcard-container {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 15px;
+    color: $light;
+    height: 400px;
+    width: 300px;
+
+    &:hover::after, &:hover::before{
+        transform: rotate(360deg);
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        border-radius: inherit;
+        background: linear-gradient(235deg, #e100ff 0%, #162d5b73 50%, #00bcd4 90%);
+        top: -4px;
+        bottom: -4px;
+        left: -4px;
+        right: -4px;
+        z-index: -1;
+        transition-duration: 3s;
+        -moz-transition-duration: 3s;
+    }
+    &::after {
+        filter: blur(25px);
+    }
+}
+.coolcard-body {
+    position: relative;
+}

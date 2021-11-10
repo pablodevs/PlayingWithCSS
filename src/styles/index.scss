@@ -4,10 +4,18 @@
 
 /*===== Views styles import =====*/
 @import "./home";
+@import "./example";
+@import "./coolcard";
 
 /*===== Variables =====*/
 $nav-height: 63px;
 $footer-height: 57.6px;
+
+@mixin displayCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 *,*::after,*::before,p{
@@ -20,8 +28,9 @@ body {
     line-height: 1.6;
 }
 .view {
-    height: fit-content;
+    min-height: calc(100% - #{$nav-height} - #{$footer-height});
     width: 100%;
+    position: relative;
 }
 a {
     text-decoration: none;
@@ -31,23 +40,19 @@ a {
     }
 }
 .rows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayCenter();
     flex-wrap: wrap;
     height: fit-content;
-    margin: auto;
 }
 .cols {
     flex: 0 0 auto;
     width: auto;
+    overflow: hidden;
 }
 /*===== Error view =====*/
 .error404 {
-    display: flex;
+    @include displayCenter();
     flex-direction: column;
-    text-align: center;
-    justify-content: center;
     align-items: center;
     color: $danger
 }

@@ -1,0 +1,25 @@
+/*===== General styles import =====*/
+@import "./colors";
+@import "./fonts";
+
+/*===== Example View =====*/
+.example-container {
+    overflow: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.example-title {
+    width: 100%;
+    text-align: center;
+    margin-block: 1rem;
+}
+.example-content {
+    margin-block: 2rem;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+}

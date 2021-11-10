@@ -1,26 +1,30 @@
-import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { CoolCard } from "../component/coolcard.js";
+import "../../styles/example.scss";
 import { Context } from "../store/appContext";
 
-export const Example = props => {
+export const Example = () => {
 	const { store, actions } = useContext(Context);
+	const [content, setContent] = useState(<></>);
+	const [title, setTitle] = useState("Example");
 	const params = useParams();
+
+	useEffect(() => {
+		store.examples.map(example => {
+			if (example.example_id == params.id) {
+				setContent(example.html);
+				setTitle(example.title);
+			}
+		});
+	}, []);
+
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
-
-			<hr className="my-4" />
-
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+		<div className="view">
+			<div className="example-container">
+				<h3 className="example-title">{title}</h3>
+				<div className="example-content">{content}</div>
+			</div>
 		</div>
 	);
-};
-
-Example.propTypes = {
-	match: PropTypes.object
 };
