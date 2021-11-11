@@ -43,6 +43,7 @@ a {
     @include displayCenter();
     flex-wrap: wrap;
     height: fit-content;
+    width: 100%;
 }
 .cols {
     flex: 0 0 auto;

@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			examples: [
 				{
 					example_id: "1",
-					title: "Cool Animated Card",
+					title: "Cool Animated Cards",
 					html: <CoolCard />
 				},
 				{
@@ -38,7 +38,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			// Some actions...
+			// setAnimation: id => {
+			// 	const store = getStore();
+			// 	// Update examples
+			// 	let storeAux = {};
+			// 	storeAux.examples = store.examples.map(element => {
+			// 		if (element.example_id === id) {
+			// 			element.animation = !element.animation;
+			// 		}
+			// 		return element;
+			// 	});
+			// 	setStore(storeAux);
+			// }
 		}
 	};
 };

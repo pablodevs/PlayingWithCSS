@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CoolCard } from "../component/coolcard.js";
+import { FiPlay } from "react-icons/fi";
 import "../../styles/example.scss";
 import { Context } from "../store/appContext";
 
