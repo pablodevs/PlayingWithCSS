@@ -21,6 +21,7 @@ export const Example = () => {
 
 	return (
 		<div className="view">
+			{/* Add buttons like carousel to change between left(params.id - 1) and right(params.id + 1) */}
 			<div className="example-container">
 				<h3 className="example-title">{title}</h3>
 				<div className="example-content">{content}</div>

@@ -17,6 +17,7 @@
     padding-block: 1rem;
 }
 .home-cols {
+    overflow: hidden;
     width: clamp(200px, 32%, 400px);
     min-width: 300px;
     aspect-ratio: 1/1;

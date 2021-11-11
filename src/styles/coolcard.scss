@@ -92,6 +92,9 @@
 div.coolcard2 {
     margin-inline: 3rem;
 }
+.coolcard2.coolcard::before {
+    transition: none
+}
 .coolcard2 .coolcard-img {
     position: absolute;
     left: 0;
@@ -105,3 +108,23 @@ div.coolcard2 {
     background: linear-gradient(#0000 0%, #000000d9 40%, #000000e3 100%);
 }
 /*===== Coolcard nº3 =====*/
+.coolcard3.coolcard::before {
+    transition: none
+}
+.coolcard3 img.coolcard-img {
+    transform: translateY(-100%);
+    transition: transform 1s ease 0.5s;
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+}
+.coolcard3:hover img.coolcard-img {
+    transform: translateY(0%);
+    opacity: 1
+}
+.coolcard3 .coolcard-text{
+    transform: translateX(-105%);
+    transition: transform 0.5s ease 1s;
+}
+.coolcard3:hover .coolcard-text {
+    transform: translateX(0%)
+}
